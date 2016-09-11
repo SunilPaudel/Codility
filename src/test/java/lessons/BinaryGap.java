@@ -32,33 +32,5 @@ public class BinaryGap {
 		
 		return max;
 	}
-
-	//the below one is bit fuzzy one
-	public static int solu(int num) {
-		boolean endBin = true;
-		boolean oneFound = false;
-		int temp = num;
-		int binGap = 0;
-		int count = 0;
-		do{
-			temp = num/2;
-			if (endBin && num % 2 == 1) {
-				endBin = false;
-				oneFound = true;
-			} else if (oneFound && num%2 == 0) {
-				count ++;
-			} else if (oneFound && num%2 == 1) {
-				if(count > binGap){
-					binGap = count;
-				}
-				count = 0;
-			}
-			num = temp;
-		} while (num > 0);
-
-		return binGap;
-	}
 	
-	
-
 }
