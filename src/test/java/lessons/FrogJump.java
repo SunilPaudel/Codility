@@ -18,8 +18,5 @@ public class FrogJump {
 		} else {
 			return totDist/D + 1;
 		}
-        
-        
     }
-
 }
